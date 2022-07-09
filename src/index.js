@@ -7,7 +7,8 @@ import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@mui/material';
 
 import HomePage from './pages/HomePage/HomePage';
-const Test1 = ()=>{return <p>test1</p>}
+import Header from './component/Header';
+const Test1 = () => { return <p>test1</p> }
 
 const route = {
   path: "/", title: "主页", element: <Outlet />, children: [
@@ -30,6 +31,7 @@ function Index() {
   })
   return (
     <ThemeProvider theme={theme}>
+      <Header routes={route}/>
       <HashRouter>
         <Routes />
       </HashRouter>
