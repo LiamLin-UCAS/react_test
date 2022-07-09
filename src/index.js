@@ -8,19 +8,17 @@ import { ThemeProvider } from '@mui/material';
 
 import HomePage from './pages/HomePage/HomePage';
 import Header from './component/Header';
-const Test1 = () => { return <p>test1</p> }
 
 const route = {
   path: "/", title: "主页", element: <Outlet />, children: [
     { title: "主页", index: true, element: <HomePage /> },
-    { title: "test1", path: "test1", element: <Test1 /> }
   ]
 }
 
 function Routes() {
   return (
     <Fragment>
-      {useRoutes([route])};
+      {useRoutes([route])}
     </Fragment>
   )
 }
